@@ -63,6 +63,7 @@ a.more:hover { text-decoration: underline; }
 .tile.dark { background: linear-gradient(135deg, var(--night-2), var(--teal)); }
 .tile.red { background: linear-gradient(135deg, var(--crimson), var(--gold)); }
 .big-tile { min-height: 220px; }
+.tile img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); display: block; }
 .split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: start; }
 .panel { background: var(--night); color: var(--cream); padding: 26px; border-radius: var(--radius); border: 2px solid var(--gold); }
 .panel h3 { color: var(--gold-light); margin-bottom: 8px; }
