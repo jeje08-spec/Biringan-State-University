@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Biringan State University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <div class="seal">BSU</div>
+      <div><strong>Biringan State University</strong><span>The Mythical Engineering University</span></div>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="menu-btn">☰ Menu</label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="student-life.html">Student Life</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="admissions.html" class="apply">Apply</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>Send a message to the Office of Admissions. A mentor will reply soon.</p>
+  </section>
+
+  <section class="block">
+    <div class="wrap split">
+      <div>
+        <div class="label">Contact Us</div>
+        <form action="thanks.html" method="get">
+          <div class="row">
+            <div class="field"><label for="fn">Full name</label><input id="fn" type="text" required></div>
+            <div class="field"><label for="fe">Email</label><input id="fe" type="email" required></div>
+          </div>
+          <div class="field">
+            <label for="fs">Subject</label>
+            <select id="fs" required>
+              <option value="">Choose a subject</option>
+              <option>Admissions</option>
+              <option>Academics</option>
+              <option>Faculty</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="fm">Message</label><textarea id="fm" required></textarea></div>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+      <div>
+        <div class="panel" style="margin-bottom:18px;">
+          <h3>Address, Phone, Email</h3>
+          <p class="contact-line"><strong>Address:</strong> Biringan Road, Mount Pandaraan, Philippines</p>
+          <p class="contact-line"><strong>Phone:</strong> (043) 000-0000</p>
+          <p class="contact-line"><strong>Email:</strong> admissions@biringan.edu.ph</p>
+          <p style="font-style:italic;color:#e6dcf5;">Beware of the Tikbalang on the trail. Keep your compass close.</p>
+        </div>
+        <div class="map">Map of Biringan Road</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <h3>Biringan State University</h3>
+  <p><em>The Mythical Engineering University</em></p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About</a> ·
+    <a href="admissions.html">Admissions</a> ·
+    <a href="academics.html">Academics</a> ·
+    <a href="faculty.html">Faculty</a> ·
+    <a href="student-life.html">Student Life</a> ·
+    <a href="news.html">News</a> ·
+    <a href="contact.html">Contact</a>
+  </p>
+  <p style="margin-top:10px;">© 2026 Biringan State University. Built with the spirit of bayanihan.</p>
+</footer>
+</body>
+</html>
