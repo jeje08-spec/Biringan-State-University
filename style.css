@@ -227,3 +227,9 @@ footer a { color: var(--gold-light); }
 @keyframes welcomeOut {
   to { opacity: 0; visibility: hidden; }
 }
+
+/* FACULTY: two-column layout with photos at their natural shape */
+.faculty-grid{display:block;columns:2 260px;column-gap:18px}
+.faculty-grid .card{break-inside:avoid;margin-bottom:18px;text-align:center}
+.faculty-grid .tile{display:block;min-height:0;background:none;font-size:inherit}
+.faculty-grid .tile img{width:100%;height:auto;border-radius:var(--radius);display:block}
