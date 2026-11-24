@@ -14,6 +14,8 @@ header { position: sticky; top: 0; z-index: 100; background: var(--night); borde
 .nav { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 16px; position: relative; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--gold-light); margin-right: auto; }
 .seal { width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(circle, var(--gold-light), var(--gold)); color: var(--night); display: grid; place-items: center; font-weight: bold; font-size: 14px; }
+.seal{overflow:hidden}
+.seal img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .brand strong { display: block; font-size: 0.95rem; }
 .brand span { font-size: 0.72rem; color: #d8cfe8; font-style: italic; }
 .nav-toggle { display: none; }
