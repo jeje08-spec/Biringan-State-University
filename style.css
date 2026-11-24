@@ -1,104 +1,3 @@
-:root {
-  --night: #1b1433; --night-2: #2a1f4d; --gold: #e0a526; --gold-light: #f6d37a;
-  --crimson: #b3262f; --teal: #1f7a7a; --cream: #fbf5e6; --sand: #f3ead2;
-  --text: #2b2236; --muted: #6b6178; --radius: 12px;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: Georgia, "Times New Roman", serif; color: var(--text); background: var(--cream); line-height: 1.6; }
-h1, h2, h3, .label, nav a, .btn { font-family: "Trebuchet MS", Verdana, sans-serif; }
-a { color: inherit; }
-
-/* HEADER / NAV */
-header { position: sticky; top: 0; z-index: 100; background: var(--night); border-bottom: 3px solid var(--gold); }
-.nav { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 16px; position: relative; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--gold-light); margin-right: auto; }
-.seal { width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(circle, var(--gold-light), var(--gold)); color: var(--night); display: grid; place-items: center; font-weight: bold; font-size: 14px; }
-.brand strong { display: block; font-size: 0.95rem; }
-.brand span { font-size: 0.72rem; color: #d8cfe8; font-style: italic; }
-.nav-toggle { display: none; }
-.menu-btn { display: none; border: 2px solid var(--gold); color: var(--gold); padding: 6px 12px; border-radius: 8px; cursor: pointer; }
-.nav-links { list-style: none; display: flex; gap: 4px; flex-wrap: wrap; }
-.nav-links a { color: #ece6f7; text-decoration: none; font-size: 0.85rem; padding: 6px 9px; border-radius: 6px; }
-.nav-links a:hover { color: var(--gold); background: rgba(255,255,255,0.06); }
-.nav-links a.active { color: var(--gold-light); border-bottom: 2px solid var(--gold); border-radius: 0; }
-.nav-links .apply { background: var(--gold); color: var(--night); font-weight: bold; }
-.nav-links .apply:hover { background: var(--gold-light); color: var(--night); }
-
-/* BUTTONS */
-.btn { display: inline-block; padding: 11px 22px; border-radius: 999px; font-weight: bold; font-size: 0.92rem; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: background 0.2s, color 0.2s; }
-.btn-gold { background: var(--gold); color: var(--night); }
-.btn-gold:hover { background: var(--gold-light); }
-.btn-dark { background: var(--night); color: var(--gold-light); }
-.btn-dark:hover { background: var(--night-2); }
-
-/* HERO */
-.hero { background: linear-gradient(160deg, var(--night) 0%, var(--night-2) 100%); color: var(--cream); text-align: center; padding: 70px 20px; position: relative; overflow: hidden; }
-.hero::after { content: "✦  ✧  ✦  ✧  ✦"; position: absolute; bottom: 14px; left: 0; right: 0; color: var(--gold); opacity: 0.5; letter-spacing: 12px; font-size: 13px; }
-.hero h1 { color: var(--gold-light); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 10px; }
-.hero p { font-style: italic; color: #e6dcf5; max-width: 620px; margin: 0 auto 22px; }
-
-/* CONTENT BLOCKS */
-.block { padding: 44px 20px; border-bottom: 1px solid #e0d6bd; }
-.block.alt { background: var(--sand); }
-.wrap { max-width: 1100px; margin: 0 auto; }
-.label { text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; color: var(--crimson); font-weight: bold; margin-bottom: 14px; }
-.block p { margin-bottom: 12px; }
-.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.card { background: white; border-radius: var(--radius); padding: 22px; box-shadow: 0 4px 14px rgba(27,20,51,0.08); border-top: 4px solid var(--teal); }
-.card h3 { color: var(--night); font-size: 1.02rem; margin-bottom: 6px; }
-.card p { font-size: 0.92rem; color: var(--muted); margin-bottom: 10px; }
-.card .myth { color: var(--crimson); font-style: italic; font-size: 0.85rem; }
-a.more { color: var(--teal); font-weight: bold; font-family: "Trebuchet MS", sans-serif; font-size: 0.9rem; text-decoration: none; }
-a.more:hover { text-decoration: underline; }
-.tile { background: linear-gradient(135deg, #cfc4e6, #efe3c2); border-radius: var(--radius); min-height: 130px; display: grid; place-items: center; font-size: 2.4rem; }
-.tile.dark { background: linear-gradient(135deg, var(--night-2), var(--teal)); }
-.tile.red { background: linear-gradient(135deg, var(--crimson), var(--gold)); }
-.big-tile { min-height: 220px; }
-.split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: start; }
-.panel { background: var(--night); color: var(--cream); padding: 26px; border-radius: var(--radius); border: 2px solid var(--gold); }
-.panel h3 { color: var(--gold-light); margin-bottom: 8px; }
-.contact-line { margin-bottom: 8px; font-size: 0.95rem; }
-.stepline { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
-.num { min-width: 36px; height: 36px; border-radius: 50%; background: var(--crimson); color: white; display: grid; place-items: center; font-weight: bold; font-family: "Trebuchet MS", sans-serif; }
-.rows { list-style: none; }
-.rows li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px dashed #d7c9a3; }
-.rows li span:last-child { font-weight: bold; color: var(--night); white-space: nowrap; }
-details { background: white; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(27,20,51,0.06); }
-summary { cursor: pointer; font-family: "Trebuchet MS", sans-serif; font-weight: bold; color: var(--night); }
-details p { margin: 10px 0 0; color: var(--muted); font-size: 0.93rem; }
-.news-item { background: white; border-radius: var(--radius); padding: 22px; margin-bottom: 16px; box-shadow: 0 4px 14px rgba(27,20,51,0.08); }
-.news-item .date { font-size: 0.78rem; color: var(--teal); text-transform: uppercase; letter-spacing: 1px; font-family: "Trebuchet MS", sans-serif; }
-.news-item h3 { color: var(--night); margin: 6px 0; font-size: 1.1rem; }
-.news-item p { color: var(--muted); font-size: 0.93rem; }
-.pager { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
-.pager a { padding: 8px 14px; border-radius: 8px; background: white; border: 1px solid #d7c9a3; text-decoration: none; font-family: "Trebuchet MS", sans-serif; font-size: 0.9rem; }
-.pager a.current { background: var(--gold); border-color: var(--gold); font-weight: bold; }
-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-form .field { margin-bottom: 14px; }
-form label { display: block; font-family: "Trebuchet MS", sans-serif; font-size: 0.88rem; margin-bottom: 5px; color: var(--night); }
-form input, form select, form textarea { width: 100%; padding: 10px 12px; border: 2px solid #e4dbc4; border-radius: 8px; font: inherit; background: white; }
-form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--gold); }
-form textarea { min-height: 120px; resize: vertical; }
-.map { min-height: 240px; background: linear-gradient(135deg, #d9e8e4, #efe3c2); border-radius: var(--radius); display: grid; place-items: center; color: var(--muted); font-style: italic; }
-
-/* FOOTER */
-footer { background: var(--night); color: #d8cfe8; text-align: center; padding: 30px 20px; border-top: 3px solid var(--gold); font-size: 0.88rem; }
-footer h3 { color: var(--gold-light); margin-bottom: 6px; }
-footer a { color: var(--gold-light); }
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .menu-btn { display: block; }
-  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--night); flex-direction: column; gap: 0; padding: 8px 0; border-bottom: 3px solid var(--gold); }
-  .nav-toggle:checked ~ .nav-links { display: flex; }
-  .nav-links a { display: block; padding: 12px 20px; border-radius: 0; }
-  .split { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-  form .row { grid-template-columns: 1fr; }
-}
-
 /* WELCOME: KEYHOLE, KEY, AND BOOK */
 .welcome-toggle { display: none; }
 
@@ -117,6 +16,8 @@ footer a { color: var(--gold-light); }
 
 /* The book */
 .book { position: absolute; left: 10px; top: 10px; width: 220px; height: 280px; perspective: 1000px; }
+
+/* Inside pages: aged parchment */
 .page {
   position: absolute; inset: 0;
   background:
@@ -129,6 +30,7 @@ footer a { color: var(--gold-light); }
 .page p { font-size: 0.9rem; margin-bottom: 4px; }
 .page .seal { width: 56px; height: 56px; font-size: 16px; margin-bottom: 10px; }
 
+/* BOOK COVER: dark leather, gold filigree frame, teal glow, sparkles */
 .cover {
   position: absolute; inset: 0;
   background:
@@ -139,7 +41,7 @@ footer a { color: var(--gold-light); }
   border-radius: 6px 12px 12px 6px;
   box-shadow: inset 0 0 30px rgba(0,0,0,0.6), 0 0 24px rgba(64,230,220,0.35);
   transform-origin: left center;
-  transition: transform 1.1s ease 1.6s;   /* opens after the key turns */
+  transition: transform 1.1s ease 1.9s;   /* opens after the key turns */
 }
 /* Gold filigree frame */
 .cover::before {
@@ -178,31 +80,40 @@ footer a { color: var(--gold-light); }
   width: 10px; height: 22px; background: var(--night); border-radius: 2px;
 }
 
-/* The key */
+/* KEY: slides in from the right, fits the keyhole, turns right */
 .key {
-  position: absolute; left: 50%; top: 60px; width: 12px; height: 70px; margin-left: -6px;
-  background: var(--gold-light); border-radius: 0 0 6px 6px; opacity: 0; z-index: 5;
+  position: absolute; left: 120px; top: 136px;   /* center of the keyhole */
+  width: 80px; height: 12px; margin-top: -6px;
+  background: var(--gold-light); border-radius: 3px;
+  transform-origin: 0 50%;                       /* pivot at the keyhole */
+  opacity: 0; z-index: 5;
 }
+/* Key bow (the round handle, on the right) */
 .key::before {
-  content: ""; position: absolute; top: -22px; left: -9px; width: 30px; height: 30px;
-  border: 6px solid var(--gold-light); border-radius: 50%;
+  content: ""; position: absolute; right: -22px; top: -8px;
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 6px solid var(--gold-light);
 }
+/* Key teeth (on the keyhole end) */
 .key::after {
-  content: ""; position: absolute; bottom: 14px; left: 12px; width: 10px; height: 6px;
-  background: var(--gold-light);
-  box-shadow: 0 -10px 0 0 var(--gold-light);
+  content: ""; position: absolute; left: 6px; top: 12px;
+  width: 8px; height: 10px; background: var(--gold-light);
+  box-shadow: 12px 0 0 0 var(--gold-light);
 }
-#welcome-toggle:checked ~ .welcome .key { animation: turnKey 1.4s ease forwards; }
-
+#welcome-toggle:checked ~ .welcome .key {
+  animation: turnKey 1.8s ease-in-out forwards;
+}
 @keyframes turnKey {
-  0%   { opacity: 0; transform: translateY(-160px); }
-  35%  { opacity: 1; transform: translateY(0); }
-  65%  { opacity: 1; transform: translateY(0) rotate(0deg); }
-  100% { opacity: 0; transform: translateY(0) rotate(90deg); }
+  0%   { opacity: 0; transform: translateX(260px) rotate(0deg); }
+  15%  { opacity: 1; }
+  35%  { opacity: 1; transform: translateX(0) rotate(0deg); }   /* fits the keyhole */
+  70%  { opacity: 1; transform: translateX(0) rotate(90deg); }  /* turns to the right */
+  85%  { opacity: 0; transform: translateX(0) rotate(90deg); }
+  100% { opacity: 0; transform: translateX(0) rotate(90deg); }
 }
 
 /* Fade the welcome screen away to reveal the Home page */
-#welcome-toggle:checked ~ .welcome { animation: welcomeOut 0.8s ease 3.4s forwards; }
+#welcome-toggle:checked ~ .welcome { animation: welcomeOut 0.8s ease 3.7s forwards; }
 @keyframes welcomeOut {
   to { opacity: 0; visibility: hidden; }
 }
