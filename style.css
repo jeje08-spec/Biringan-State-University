@@ -33,10 +33,16 @@ header { position: sticky; top: 0; z-index: 100; background: var(--night); borde
 .btn-dark:hover { background: var(--night-2); }
 
 /* HERO */
-.hero { background: linear-gradient(160deg, var(--night) 0%, var(--night-2) 100%); color: var(--cream); text-align: center; padding: 70px 20px; position: relative; overflow: hidden; }
-.hero::after { content: "✦  ✧  ✦  ✧  ✦"; position: absolute; bottom: 14px; left: 0; right: 0; color: var(--gold); opacity: 0.5; letter-spacing: 12px; font-size: 13px; }
-.hero h1 { color: var(--gold-light); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 10px; }
-.hero p { font-style: italic; color: #e6dcf5; max-width: 620px; margin: 0 auto 22px; }
+.hero{
+  background:
+    linear-gradient(rgba(27,20,51,.6), rgba(27,20,51,.75)),
+    url("hero.jpg") center / cover no-repeat;
+  color:#FFF8EC;
+  text-align:center;
+  padding:70px 20px;
+  position:relative;
+  overflow:hidden;
+}
 
 /* CONTENT BLOCKS */
 .block { padding: 44px 20px; border-bottom: 1px solid #e0d6bd; }
